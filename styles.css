@@ -1,0 +1,125 @@
+/* --- CORE WEBSITE STYLES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+
+.logo { font-size: 1.5rem; font-weight: bold; }
+.nav-links { list-style: none; display: flex; }
+.nav-links li { margin-left: 20px; }
+.nav-links a { color: #fff; text-decoration: none; font-weight: bold; }
+.nav-links a.active { color: #ffcc00; }
+
+.hero {
+    background: url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.hero-content { background: rgba(0, 0, 0, 0.6); padding: 2rem; border-radius: 10px; }
+.hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+
+.mission, .Patrons { padding: 4rem 2rem; text-align: center; background: #fff; }
+.mission h2, .Patrons h2 { font-size: 2.5rem; margin-bottom: 1rem; }
+
+.Patron-logos { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 20px; }
+.Patron-logos img { height: 80px; filter: grayscale(100%); transition: filter 0.3s; }
+.Patron-logos img:hover { filter: grayscale(0%); }
+
+.contact-us { padding: 4rem 2rem; background: #e2e2e2; }
+.contact-container { display: flex; justify-content: space-between; width: 90%; margin: auto; }
+.contact-info { flex: 1; }
+.contact-form { flex: 1; display: flex; flex-direction: column; }
+.contact-form input, .contact-form textarea { margin-bottom: 1rem; padding: 0.5rem; border: 1px solid #ccc; border-radius: 5px; }
+.contact-form button { padding: 0.5rem; background: #333; color: #fff; border: none; cursor: pointer; border-radius: 5px; }
+
+footer { text-align: center; padding: 2rem 0; background: #333; color: #fff; }
+
+/* --- VOLUNTEER MAP INTEGRATION STYLES --- */
+.map-integration-wrapper {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.section-title { margin-bottom: 40px; font-size: 32px; font-weight: 800; }
+
+.map-main-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    height: 75vh;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: left;
+}
+
+/* Map specific styling */
+.map-section { flex: 2; position: relative; background-color: #4aaef7; }
+.map-svg { width: 100%; height: 100%; }
+.map-path { fill: #f0f0f0; stroke: #cccccc; stroke-width: 0.5px; }
+
+.legend { position: absolute; top: 20px; left: 20px; background: white; padding: 12px; border-radius: 12px; z-index: 30; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+.legend-item { display: flex; align-items: center; margin-bottom: 8px; font-size: 12px; font-weight: 700; }
+.dot { width: 16px; height: 6px; border-radius: 3px; margin-right: 10px; display: inline-block; }
+.dot.high { background-color: #00ff40; }
+.dot.moderate { background-color: #ffcc00; }
+.dot.low { background-color: #ff0000; }
+
+.pin { position: absolute; width: 35px; height: 35px; cursor: pointer; z-index: 50; transform: translate(-50%, -100%); transition: transform 0.2s ease; }
+
+/* Sidebar details styling */
+.details-section { flex: 1; background: white; padding: 30px; display: flex; flex-direction: column; overflow-y: auto; border-left: 1px solid #eee; }
+.placeholder-text { color: #888; text-align: center; margin-top: 50%; font-weight: 500; }
+.details-content { display: none; flex-direction: column; height: 100%; }
+
+.location-header { display: flex; align-items: center; margin-bottom: 25px; font-weight: 800; font-size: 18px; color: #000; }
+.location-header svg { width: 22px; margin-right: 12px; }
+
+.event-card { background-color: #d9d9d9; border-radius: 30px; padding: 25px 30px; margin-bottom: 20px; }
+.info-row { display: flex; align-items: center; margin-bottom: 12px; }
+.info-row svg { width: 20px; height: 20px; margin-right: 15px; color: #000; }
+.info-text { font-size: 15px; font-weight: 600; color: #1a1a1a; }
+
+.progress-container { width: 100%; background-color: #fcfcfc; height: 12px; border-radius: 10px; margin-top: 15px; overflow: hidden; }
+.progress-bar { height: 100%; border-radius: 10px; transition: width 0.6s ease; }
+
+.slot-signup-btn { margin-top: 15px; background-color: #111; color: white; border: none; padding: 12px; width: 100%; border-radius: 40px; font-size: 16px; font-weight: 800; cursor: pointer; }
+
+/* MODAL STYLES */
+.modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.6); justify-content: center; align-items: center; }
+.modal-content { background: white; padding: 40px; border-radius: 30px; text-align: center; width: 90%; max-width: 400px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+.modal h3 { margin-bottom: 10px; font-size: 22px; font-family: 'Inter', sans-serif; }
+.modal-note { font-size: 13px; color: #666; margin: 15px 0; font-weight: 500; }
+.modal-buttons { display: flex; flex-direction: column; gap: 10px; margin-top: 20px; }
+.modal-signup-btn { background: #111; color: white; border: none; padding: 15px; border-radius: 40px; font-weight: 700; cursor: pointer; font-size: 16px; }
+.org-btn { background: #555; }
+.close-modal { margin-top: 15px; background: none; border: none; color: #888; cursor: pointer; text-decoration: underline; font-size: 14px; }

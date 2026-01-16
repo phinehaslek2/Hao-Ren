@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hao Ren Hao Shi - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">HAO REN HAO SHI</div>
+            <ul class="nav-links">
+                <li><a href="Home.html" class="active">Home</a></li>
+                <li><a href="AboutUs.html">About us</a></li>
+                <li><a href="#volunteer-map-section">Sign up</a></li>
+                <li><a href="Restaurant.html">Restaurant</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Building a Stronger, More Inclusive Society</h1>
+            <p>At HAO REN HAO SHI, we believe that everyone deserves the opportunity to thrive. Through our dedicated programs and compassionate community, we work tirelessly to support those in need and foster a spirit of giving and solidarity.</p>
+        </div>
+    </section>
+
+    <section class="mission">
+        <h2>Our Mission</h2>
+        <p>To provide essential support and resources to vulnerable individuals and families, empowering them to overcome challenges and build a brighter future. We are committed to transparency, integrity, and impactful action in every project we undertake.</p>
+    </section>
+
+    <section id="volunteer-map-section" class="map-integration-wrapper">
+        <h2 class="section-title">Volunteer Availability Map</h2>
+        <div class="map-main-container">
+            <div class="map-section" id="map-container">
+                <div class="legend">
+                    <div class="legend-item"><span class="dot high"></span> = High Availability</div>
+                    <div class="legend-item"><span class="dot moderate"></span> = Moderate Availability</div>
+                    <div class="legend-item"><span class="dot low"></span> = Low / Full</div>
+                </div>
+            </div>
+            <div class="details-section">
+                <div id="placeholder" class="placeholder-text">Select a location on the map to view details.</div>
+                <div id="details-content" class="details-content"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="Patrons">
+        <h2>Our Patrons</h2>
+        <div class="Patron-logos">
+            <img src="https://www.temasek.com.sg/content/dam/temasek-corporate/logos/logo-temasek.png" alt="Temasek Holdings">
+            <img src="https://www.straitstimes.com/sites/default/files/styles/article_pictrure_780x520_/public/articles/2018/12/12/st_20181212_ltocbc12_4483753.jpg" alt="OCBC Bank">
+            <img src="https://www.dbs.com/iwov-resources/images/logos/dbs-logo-red.png" alt="DBS Bank">
+            <img src="https://www.uobgroup.com/uobgroup/assets/images/common/uob-logo.png" alt="UOB Bank">
+            <img src="https://www.singtel.com/content/dam/singtel/about-singtel/logos/singtel-logo.png" alt="Singtel">
+        </div>
+    </section>
+
+    <section class="contact-us">
+        <h2>Contact Us</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <p><strong>Email:</strong> HRHS@tp.edu.sg</p>
+                <p><strong>Phone:</strong> +65 1234 5678</p>
+                <p><strong>Address:</strong> 21 Tampines Ave 1, Singapore 529757</p>
+            </div>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <div id="choice-modal" class="modal">
+        <div class="modal-content">
+            <h3>Sign Up Type</h3>
+            <p>Please select your sign-up category.</p>
+            <p class="modal-note">Note: Organizational sign-ups are restricted to official business emails only.</p>
+            <div class="modal-buttons">
+                <button id="btn-individual" class="modal-signup-btn">Individual</button>
+                <button id="btn-org" class="modal-signup-btn org-btn">Organization</button>
+            </div>
+            <button class="close-modal" onclick="closeModal()">Cancel</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Hao Ren Hao Shi. All rights reserved.</p>
+    </footer>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.8.0/firebase-app.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyB-w102hHM4Zi7cE7OXxoMYywsdbjZb8Io",
+    authDomain: "hrhs-b9955.firebaseapp.com",
+    projectId: "hrhs-b9955",
+    storageBucket: "hrhs-b9955.firebasestorage.app",
+    messagingSenderId: "28129734887",
+    appId: "1:28129734887:web:a57f521053fc525673b242",
+  };
+
+  // 🔥 THIS LINE links Firebase to your web app
+  const app = initializeApp(firebaseConfig);
+
+  console.log("Firebase connected ✅", app.name);
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>
